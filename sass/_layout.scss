@@ -1,3 +1,53 @@
+// Reset stuff
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
 // General
 body{ 
     background:whiteSmoke;
@@ -22,17 +72,16 @@ strong{font-weight:bold;}
 // Label + checkbox tricks
 #menu{display:none;}                                                  
 #menu:checked ~ label .circle {
-    @include transform(rotate(0deg));   
-}      
-
+    @include transform(rotate(0deg));
+}
 
 // Red button
 .circle-container {
-    position:fixed;bottom:10px;left:10px;height:40px;width:40px;
+    position:fixed;bottom:200px;left:200px;height:40px;width:40px;
     @include box-shadow(0 0 10px rgba(0,0,0,0.7));
     @include border-radius(20px);
     .circle {
-        position:fixed;bottom:10px;left:10px;
+        position:fixed;bottom:200px;left:200px;
         height:40px;width:40px;
         cursor:pointer;
         z-index:2;      
@@ -65,7 +114,7 @@ strong{font-weight:bold;}
 .items li {
     position:fixed;        
     z-index:-1;
-    bottom:20px;left:20px;
+    bottom:210px;left:210px;
     display:block;
     height:26px;width:26px;
     color:white;
@@ -76,4 +125,11 @@ strong{font-weight:bold;}
     @include linear-gradient(color-stops(#433f3c, #44403d));                
     @include border-radius(13px);     
     @include transform-style(preserve-3d);   
-}               
+		text-decoration:none;
+}
+
+.items li:hover {
+	cursor:pointer;
+	@include linear-gradient(color-stops(#e85738, #cb2c16));
+	text-decoration:none;
+}         

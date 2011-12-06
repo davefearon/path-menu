@@ -1,9 +1,10 @@
-@import "compass/reset","compass/css3";        
+@import "compass/reset";
+@import "compass/css3";
 @import "layout";
 
 // ============== Vars =====================
-$items: 6; // number of items
-$arc: 90;  // arc of the circle
+$items: 24; // number of items
+$arc: 360;  // arc of the circle
 $angle: $arc/$items;  // angle between items
 $space:170; // a value in pixel. It's the space between the red circle and the items
 $circleCenterX: 30;  // the X coord of the red  circle center 
@@ -21,7 +22,7 @@ $disappearDelay: 50;
     $xm: round($x * 1.15);
     $ym: round($y * 1.15);                           
     
-    $disappearDelay: $disappearDelay * 1.35;
+    $disappearDelay: $disappearDelay * 1.10;
      
     // CSS checkbox + label tricks
     #menu:checked ~ .items li:nth-child(#{$i}) {
@@ -68,13 +69,7 @@ $disappearDelay: 50;
             -webkit-animation-timing-function:cubic-bezier(.45,.97,.51,.78)
         }
         100% {
-           -webkit-transform:translate3d(0,0,0px) rotateZ(540deg);        
+           -webkit-transform:translate3d(0,0,0px) rotateZ(540deg);
         }
-    }     
-          
-}        
-
-
-    
- 
-
+    }
+}
